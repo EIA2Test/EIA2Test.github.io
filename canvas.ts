@@ -1,6 +1,6 @@
-window.addEventListener("load", init);
+window.addEventListener("load", initCanvas);
 
-function init(_event: Event): void {
+function initCanvas(_event: Event): void {
     var canvas: HTMLCanvasElement = document.getElementsByTagName("canvas")[0];
     var crc: CanvasRenderingContext2D = canvas.getContext("2d");
     console.log(crc);
