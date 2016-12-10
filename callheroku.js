@@ -3,7 +3,7 @@ var xhr;
 function initHeroku(_event) {
     xhr = new XMLHttpRequest();
     xhr.open("GET", "https://eia2test.herokuapp.com");
-    //    xhr.setRequestHeader(
+    //xhr.open("GET", "http://localhost:8080");
     xhr.addEventListener("readystatechange", onChange);
     xhr.send();
 }
