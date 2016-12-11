@@ -8,6 +8,10 @@ function initHeroku(_event) {
     xhr.send();
 }
 function onChange(_event) {
-    console.log(xhr.response);
+    if (xhr.readyState == xhr.DONE) {
+        var out = document.getElementById("output");
+        console.log(xhr.readyState, xhr.responseType, xhr.status, xhr.statusText, xhr.response);
+        out.innerHTML = xhr.responseText;
+    }
 }
 //# sourceMappingURL=callheroku.js.map

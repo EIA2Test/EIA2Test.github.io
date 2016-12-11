@@ -10,5 +10,9 @@ function initHeroku(_event: Event): void {
 }
 
 function onChange(_event: Event): void {
-    console.log(xhr.response);
+    if (xhr.readyState == xhr.DONE) {
+        var out: HTMLDivElement = <HTMLDivElement>document.getElementById("output");
+        console.log(xhr.readyState, xhr.responseType, xhr.status, xhr.statusText, xhr.response);
+        out.innerHTML = xhr.responseText;
+    }
 }
